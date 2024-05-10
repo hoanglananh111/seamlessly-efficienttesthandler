@@ -1,4 +1,11 @@
-const dropWhile = (arr, func) => {
-  while (arr.length > 0 && !func(arr[0])) arr = arr.slice(1);
-  return arr;
-};
+function findMaxConsecutiveOnes(nums) {
+  let maxCount = 0;
+  let count = 0;
+  for (const num of nums) {
+    if (num === 1) {
+      count++;
+      maxCount = Math.max(maxCount, count);
+    } else count = 0;
+  }
+  return maxCount;
+}
