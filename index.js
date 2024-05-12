@@ -1,1 +1,3 @@
-const drop = (arr, n = 1) => arr.slice(n);
+const lcmRecursive = (a, b) => {
+  return (a * b) / gcdRecursive(a, b);
+};
